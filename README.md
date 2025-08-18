@@ -40,3 +40,18 @@
 : 문자열 양쪽 끝에 있는 마침표(.)만 제거  
 ex) .aaa. => aaa
 
+- sorted(), sorted(arr, reverse=True)
+: 리스트 오름차순/ 내림차순 정렬
+ex) 1) sorted(arr, reverse=True) : [1,2,3,4,5] -> [5,4,3,2,1]
+    2) sorted(arr) : [3,4,2,1,6] => [1,2,3,4,5]
+
+- set()
+: 리스트 중복 제거  
+
+```python
+list = [1, 1, 2, 2, 3, 4]
+print(list(set(list)))
+# set을 하면 object로 반환되기 때문에 list로 변환 후  return
+=> [1,2,3,4]
+```
+
