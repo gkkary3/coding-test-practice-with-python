@@ -55,3 +55,35 @@ print(list(set(list)))
 => [1,2,3,4]
 ```
 
+- dic.get("key", defaultValue)
+: 딕셔너리에 해당 key 값이 있으면 값을 가져오고, 없으면 defaultValue로 설정
+ex)
+
+```pyhon
+participant = ["leo", "kiki", "eden", "leo"]
+dic = {}
+
+for p in participant:
+    dic[p] = dic.get(p, 0) + 1
+    print(dic)
+```
+
+```python
+{'leo': 1}
+{'leo': 1, 'kiki': 1}
+{'leo': 1, 'kiki': 1, 'eden': 1}
+{'leo': 2, 'kiki': 1, 'eden': 1}
+
+```
+- dic.items()
+: 딕셔너리의 key, value 값을 불러올 수 있음
+ex)
+
+```python
+dic = dict({"A":0, "B":0})
+
+for key,val in dic.items():
+    print(key) 
+    print(val)
+``` 
+
