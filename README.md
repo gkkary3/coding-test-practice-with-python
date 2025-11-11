@@ -5,12 +5,15 @@
 하루 5문제씩 꾸준히 풀이하고 기록합니다.
 
 # Python 문법 정리
-## ord()
-: 문자를 유니코드로 변환
+## ord() vs chr()
+ord(): 문자를 유니코드로 변환
+chr(): 유니코드를 문자로 전환
 
 ``` python
     for char in string: 
-        char idx = ord(char) - ord('a')
+        idx = ord(char) - ord('a')
+    ...
+    chr(idx + ord('a')) //문자변환
 ```
 ### ord('a')를 빼는 이유
 `ord('a')`를 빼는 것은 **문자를 0부터 시작하는 인덱스로 변환**하기 위해서입니다.
