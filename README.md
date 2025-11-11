@@ -4,8 +4,25 @@
 유형별로 정리하여 체계적으로 연습하고 있습니다.  
 하루 5문제씩 꾸준히 풀이하고 기록합니다.
 
-## Python 문법 정리
-- isalpha()  
+# Python 문법 정리
+## ord()
+: 문자를 유니코드로 변환
+
+``` python
+    for char in string: 
+        char idx = ord(char) - ord('a')
+```
+### ord('a')를 빼는 이유
+`ord('a')`를 빼는 것은 **문자를 0부터 시작하는 인덱스로 변환**하기 위해서입니다.
+
+### 알파벳을 배열 인덱스로 매핑
+```python
+print(ord('a') - ord('a'))  # 0  (a는 인덱스 0)
+print(ord('b') - ord('a'))  # 1  (b는 인덱스 1)
+print(ord('c') - ord('a'))  # 2  (c는 인덱스 2)
+print(ord('z') - ord('a'))  # 25 (z는 인덱스 25)
+
+## isalpha()  
 : 해당 문자가 알파벳인 지 유무를 판단
 
 ```python
@@ -13,7 +30,7 @@
         return False
 ```
 
-- 정규표현식 
+## 정규표현식 
 ```python
 1. new_id_low = re.sub(r'[^a-z0-9\-_.]', '', new_id_low)
 
@@ -36,16 +53,16 @@
     - '.' : 그 부분을 마침표 하나로 치환
 ```
 
-- .strip('.')
+## .strip('.')
 : 문자열 양쪽 끝에 있는 마침표(.)만 제거  
 ex) .aaa. => aaa
 
-- sorted(), sorted(arr, reverse=True)
+## sorted(), sorted(arr, reverse=True)
 : 리스트 오름차순/ 내림차순 정렬
 ex) 1) sorted(arr, reverse=True) : [1,2,3,4,5] -> [5,4,3,2,1]
     2) sorted(arr) : [3,4,2,1,6] => [1,2,3,4,5]
 
-- set()
+## set()
 : 리스트 중복 제거  
 
 ```python
@@ -55,7 +72,7 @@ print(list(set(list)))
 => [1,2,3,4]
 ```
 
-- dic.get("key", defaultValue)
+## dic.get("key", defaultValue)
 : 딕셔너리에 해당 key 값이 있으면 값을 가져오고, 없으면 defaultValue로 설정
 ex)
 
@@ -75,7 +92,7 @@ for p in participant:
 {'leo': 2, 'kiki': 1, 'eden': 1}
 
 ```
-- dic.items()
+## dic.items()
 : 딕셔너리의 key, value 값을 불러올 수 있음
 ex)
 
