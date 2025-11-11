@@ -24,6 +24,7 @@ print(ord('a') - ord('a'))  # 0  (a는 인덱스 0)
 print(ord('b') - ord('a'))  # 1  (b는 인덱스 1)
 print(ord('c') - ord('a'))  # 2  (c는 인덱스 2)
 print(ord('z') - ord('a'))  # 25 (z는 인덱스 25)
+```
 
 ## isalpha()  
 : 해당 문자가 알파벳인 지 유무를 판단
